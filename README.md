@@ -20,7 +20,7 @@ Bộ dữ liệu được sử dụng mô phỏng thông tin khách hàng ngân 
 - **Thông tin dịch vụ:** Tenure (thâm niên), NumOfProducts, HasCrCard, IsActiveMember.
 - **Biến mục tiêu (Target):** `Exited` (1: Rời bỏ, 0: Ở lại).
 
-*Nguồn dữ liệu: Kaggle Competitions.*
+*Nguồn dữ liệu: Kaggle Competitions.* : https://www.kaggle.com/competitions/bank-customer-churn-prediction-challenge/data
 
 ## 🛠️ Quy trình thực hiện (Workflow)
 1. **Business Understanding:** Định nghĩa rõ vấn đề, mục tiêu và tiêu chí thành công (Success Criteria) từ góc độ kỹ thuật và kinh doanh.
@@ -60,7 +60,7 @@ The dataset simulates bank customer information (similar to the famous Churn Mod
 - **Services:** Tenure, NumOfProducts, HasCrCard, IsActiveMember.
 - **Target Variable:** `Exited` (1: Churn, 0: Retain).
 
-*Data Source: Kaggle Competitions.*
+*Data Source: Kaggle Competitions.* : https://www.kaggle.com/competitions/bank-customer-churn-prediction-challenge/data
 
 ## 🛠️ Workflow
 1. **Business Understanding:** Clearly define the problem, objectives, and Success Criteria from both technical and business perspectives.
