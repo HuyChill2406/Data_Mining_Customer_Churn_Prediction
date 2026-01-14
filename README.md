@@ -24,13 +24,13 @@ Dựa trên phân tích bối cảnh thực tế:
 **Biến mục tiêu (Target):** `Exited` (1: Rời bỏ, 0: Ở lại).
 
 ## 🛠️ Quy trình thực hiện (Workflow)
-1️⃣ Business Understanding
+1️⃣ **Business Understanding**
 
 - Định nghĩa bài toán churn prediction từ góc độ kinh doanh và kỹ thuật.
 
 - Xác định tiêu chí thành công, tập trung vào khách hàng rời bỏ (class 1).
 
-2️⃣ Data Understanding & EDA
+2️⃣ **Data Understanding & EDA**
 
 - Thống kê mô tả cho biến số và biến phân loại.
 
@@ -40,7 +40,7 @@ Dựa trên phân tích bối cảnh thực tế:
 
 - Phân tích mối quan hệ giữa các đặc trưng và churn.
 
-3️⃣ Data Preprocessing & Feature Engineering
+3️⃣ **Data Preprocessing & Feature Engineering**
 
 - Thử nghiệm nhiều chiến lược tiền xử lý: One-hot encoding (Dummies), Label encoding (Catcode), Feature binning + encoding
 
@@ -48,7 +48,7 @@ Dựa trên phân tích bối cảnh thực tế:
 
 - So sánh hiệu quả với các phương pháp scaling: StandardScaler, MinMaxScaler
 
-4️⃣ Modeling & Evaluation
+4️⃣ **Modeling & Evaluation**
 
 - Huấn luyện và benchmark nhiều mô hình: Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost
 
@@ -56,7 +56,7 @@ Dựa trên phân tích bối cảnh thực tế:
 
 - Tập trung vào các metric quan trọng cho churn: Precision / Recall / F1-score (class 1), ROC-AUC
 
-5️⃣ Model Selection & Persistence
+5️⃣ **Model Selection & Persistence**
 
 - Lựa chọn mô hình tốt nhất dựa trên F1-score của churn class.
 
@@ -64,7 +64,7 @@ Dựa trên phân tích bối cảnh thực tế:
 
 - Phân tích feature importance cho các mô hình cây.
 
-6️⃣ Deployment-oriented Output
+6️⃣ **Deployment-oriented Output**
 
 - Sinh file Kaggle submission từ model đã lưu.
 
