@@ -1,4 +1,4 @@
-# Bank Customer Churn Prediction 🏦📊 (Englis version below_
+# Bank Customer Churn Prediction 🏦📊 (Englis version below)
 
 ## 📖 Giới thiệu (Overview)
 Dự án này tập trung vào việc xây dựng mô hình Machine Learning để dự đoán khả năng rời bỏ dịch vụ (Customer Churn) của khách hàng ngân hàng. Trong bối cảnh ngành tài chính cạnh tranh gay gắt, việc giữ chân khách hàng hiện tại quan trọng và tiết kiệm chi phí hơn nhiều so với việc tìm kiếm khách hàng mới.
