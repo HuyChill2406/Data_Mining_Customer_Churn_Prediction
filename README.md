@@ -77,29 +77,30 @@ Dựa trên phân tích bối cảnh thực tế:
 
 -------------------------------------------------------------
 
-# Bank Customer Churn Prediction 🏦📊
+# 🇬🇧 Bank Customer Churn Prediction 🏦📊
 
 ## 📖 Overview
-This project focuses on building a Machine Learning model to predict bank customer churn. In the fiercely competitive financial landscape, retaining existing customers is crucial and far more cost-effective than acquiring new ones.
+This project builds a complete Machine Learning pipeline to predict bank customer churn.
+In a highly competitive financial environment, early identification of at-risk customers enables banks to deploy effective retention strategies and reduce acquisition costs.
 
-Beyond model training, this project dives deep into **Business Understanding**, analyzing the business context to identify risk factors and proposing data-driven retention strategies.
+Beyond model training, the project emphasizes business understanding, linking technical decisions to real-world business impact.
 
 ## 🎯 Business Objectives
-Based on the real-world business context analysis:
-- **Primary Objective:** Reduce customer churn rate by early identification of high-risk customers.
-- **Supporting Objectives:**
-  - Identify key factors influencing churn decisions (e.g., service fees, customer experience, competitor offers).
-  - Optimize Retention Campaigns by targeting the right audience.
-  - Improve ROI for Marketing and Customer Service activities.
+**Primary Objective**: Reduce customer churn by early identification of high-risk customers.
+**Supporting Objectives**:
+- Identify key drivers of churn (customer behavior, demographics, financial status).
+- Optimize retention campaigns by targeting the right customers.
+- Improve ROI for marketing and customer service initiatives.
+
 
 ## 🗂️ The Data
-The dataset simulates bank customer information (similar to the famous Churn Modelling dataset), consisting of 15,000 records with features such as:
-- **Demographics:** CustomerId, Surname, Geography, Gender, Age.
-- **Financial Status:** CreditScore, Balance, EstimatedSalary.
-- **Services:** Tenure, NumOfProducts, HasCrCard, IsActiveMember.
-- **Target Variable:** `Exited` (1: Churn, 0: Retain).
-
-*Data Source: Kaggle Competitions.* : https://www.kaggle.com/competitions/bank-customer-churn-prediction-challenge/data
+**Source**: Kaggle – Bank Customer Churn Prediction Challenge (https://www.kaggle.com/competitions/bank-customer-churn-prediction-challenge/data).
+**Size**: ~15,000 records
+**Features**:
+- **Demographics**: CustomerId, Surname, Geography, Gender, Age
+- **Financial**: CreditScore, Balance, EstimatedSalary
+- **Services**: Tenure, NumOfProducts, HasCrCard, IsActiveMember
+**Target**: Exited (1 = Churn, 0 = Retain)
 
 ## 🛠️ Workflow
 1. **Business Understanding:** Clearly define the problem, objectives, and Success Criteria from both technical and business perspectives.
@@ -107,10 +108,12 @@ The dataset simulates bank customer information (similar to the famous Churn Mod
    - Descriptive statistics.
    - Checking for Missing values and Duplicates.
    - Univariate Analysis and Outlier Detection using the IQR method.
-3. **Data Preprocessing:** Data cleaning, normalization, and feature engineering.
-4. **Modeling & Evaluation:** Building and evaluating models (Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost).
+3. **Data Preprocessing:** Multiple encoding strategies, feature binning, scaling, and class imbalance handling.
+4.  **Modeling & Evaluation:** Building and evaluating models (Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost). Benchmarking multiple classifiers using Stratified 5-Fold CV, focusing on churn-specific metrics.
+5. **Model Selection & Persistence**: Saving best-performing models and scalers for reuse.
+6. **Deployment-ready Output**: Generating Kaggle-compatible submission files and benchmark reports.
 
 ## 🚀 Tech Stack
 - **Language:** Python
-- **Libraries:** Pandas, NumPy (Data Processing), Matplotlib, Seaborn (Visualization).
+- **Libraries**: Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, CatBoost, Matplotlib, Seaborn (Visualization)
 - **Environment:** Jupyter Notebook / Google Colab.
