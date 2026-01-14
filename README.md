@@ -2,7 +2,7 @@
 
 💡 Tổng quan
 
-Bài toán phân loại: xây dựng pipeline EDA → Tiền xử lý → Huấn luyện → Đánh giá → Submission với nhiều mô hình (Decision Tree, RandomForest, XGBoost/LightGBM/CatBoost).
+Bài toán phân loại: xây dựng pipeline EDA → Tiền xử lý → Huấn luyện → Đánh giá với nhiều mô hình (Decision Tree, RandomForest, XGBoost/LightGBM/CatBoost).
 Mục tiêu: tạo một khung làm việc tái sử dụng cho các bài toán tabular.
 
 📦 Dữ liệu
