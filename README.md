@@ -29,7 +29,7 @@ Bộ dữ liệu được sử dụng mô phỏng thông tin khách hàng ngân 
    - Kiểm tra dữ liệu thiếu (Missing values) và trùng lặp (Duplicates).
    - Phân tích đơn biến (Univariate Analysis) và phát hiện ngoại lai (Outlier Detection) sử dụng phương pháp IQR.
 3. **Data Preprocessing:** Xử lý dữ liệu, làm sạch và chuẩn hóa.
-4. **Modeling & Evaluation:** Xây dựng và đánh giá mô hình (đang cập nhật).
+4. **Modeling & Evaluation:** Xây dựng và đánh giá mô hình.
 
 ## 🚀 Công nghệ sử dụng (Tech Stack)
 - **Ngôn ngữ:** Python
