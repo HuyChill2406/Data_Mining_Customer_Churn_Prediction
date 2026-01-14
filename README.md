@@ -1,9 +1,10 @@
-# Bank Customer Churn Prediction 🏦📊 (English version below)
+# 🏦📊 Bank Customer Churn Prediction (English version below)
 
-## 📖 Giới thiệu (Overview)
-Dự án này tập trung vào việc xây dựng mô hình Machine Learning để dự đoán khả năng rời bỏ dịch vụ (Customer Churn) của khách hàng ngân hàng. Trong bối cảnh ngành tài chính cạnh tranh gay gắt, việc giữ chân khách hàng hiện tại quan trọng và tiết kiệm chi phí hơn nhiều so với việc tìm kiếm khách hàng mới.
+## 🇻🇳 Giới thiệu (Overview)
+Dự án này tập trung xây dựng pipeline Machine Learning hoàn chỉnh nhằm dự đoán khả năng khách hàng ngân hàng rời bỏ dịch vụ (Customer Churn).
+Trong bối cảnh ngành tài chính cạnh tranh cao, việc xác định sớm các khách hàng có nguy cơ rời bỏ giúp ngân hàng triển khai các chiến lược giữ chân hiệu quả và tiết kiệm chi phí hơn so với việc thu hút khách hàng mới.
 
-Dự án không chỉ dừng lại ở việc huấn luyện mô hình mà còn đi sâu vào phân tích bối cảnh kinh doanh, xác định các yếu tố rủi ro và đề xuất các chiến lược giữ chân khách hàng dựa trên dữ liệu.
+Bên cạnh huấn luyện mô hình, dự án nhấn mạnh Business Understanding, phân tích nguyên nhân rời bỏ và đánh giá tác động của các quyết định kỹ thuật đến hiệu quả kinh doanh.
 
 ## 🎯 Mục tiêu Kinh doanh (Business Objectives)
 Dựa trên phân tích bối cảnh thực tế:
@@ -14,26 +15,64 @@ Dựa trên phân tích bối cảnh thực tế:
   - Cải thiện ROI cho các hoạt động Marketing và Chăm sóc khách hàng.
 
 ## 🗂️ Dữ liệu (The Data)
-Bộ dữ liệu được sử dụng mô phỏng thông tin khách hàng ngân hàng (tương tự bộ dữ liệu Churn Modelling nổi tiếng), bao gồm 15,000 bản ghi với các đặc trưng:
+**Nguồn**: Kaggle – Bank Customer Churn Prediction Challenge (https://www.kaggle.com/competitions/bank-customer-churn-prediction-challenge/data).
+**Quy mô**: ~15,000 bản ghi
+**Biến đầu vào**:
 - **Thông tin nhân khẩu học:** CustomerId, Surname, Geography, Gender, Age.
 - **Thông tin tài chính:** CreditScore, Balance, EstimatedSalary.
 - **Thông tin dịch vụ:** Tenure (thâm niên), NumOfProducts, HasCrCard, IsActiveMember.
-- **Biến mục tiêu (Target):** `Exited` (1: Rời bỏ, 0: Ở lại).
-
-*Nguồn dữ liệu: Kaggle Competitions.* : https://www.kaggle.com/competitions/bank-customer-churn-prediction-challenge/data
+**Biến mục tiêu (Target):** `Exited` (1: Rời bỏ, 0: Ở lại).
 
 ## 🛠️ Quy trình thực hiện (Workflow)
-1. **Business Understanding:** Định nghĩa rõ vấn đề, mục tiêu và tiêu chí thành công (Success Criteria) từ góc độ kỹ thuật và kinh doanh.
-2. **Data Understanding & EDA:**
-   - Phân tích thống kê mô tả.
-   - Kiểm tra dữ liệu thiếu (Missing values) và trùng lặp (Duplicates).
-   - Phân tích đơn biến (Univariate Analysis) và phát hiện ngoại lai (Outlier Detection) sử dụng phương pháp IQR.
-3. **Data Preprocessing:** Xử lý dữ liệu, làm sạch và chuẩn hóa.
-4. **Modeling & Evaluation:** Xây dựng và đánh giá mô hình (Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost)
+1️⃣ Business Understanding
+
+- Định nghĩa bài toán churn prediction từ góc độ kinh doanh và kỹ thuật.
+
+- Xác định tiêu chí thành công, tập trung vào khách hàng rời bỏ (class 1).
+
+2️⃣ Data Understanding & EDA
+
+- Thống kê mô tả cho biến số và biến phân loại.
+
+- Kiểm tra dữ liệu thiếu và trùng lặp.
+
+- Phân tích đơn biến và phát hiện ngoại lai bằng IQR method.
+
+- Phân tích mối quan hệ giữa các đặc trưng và churn.
+
+3️⃣ Data Preprocessing & Feature Engineering
+
+- Thử nghiệm nhiều chiến lược tiền xử lý: One-hot encoding (Dummies), Label encoding (Catcode), Feature binning + encoding
+
+- Xử lý class imbalance bằng undersampling (giảm lớp đa số).
+
+- So sánh hiệu quả với các phương pháp scaling: StandardScaler, MinMaxScaler
+
+4️⃣ Modeling & Evaluation
+
+- Huấn luyện và benchmark nhiều mô hình: Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost
+
+- Đánh giá bằng Stratified K-Fold Cross Validation (k = 5).
+
+- Tập trung vào các metric quan trọng cho churn: Precision / Recall / F1-score (class 1), ROC-AUC
+
+5️⃣ Model Selection & Persistence
+
+- Lựa chọn mô hình tốt nhất dựa trên F1-score của churn class.
+
+- Lưu model và scaler bằng joblib để tái sử dụng.
+
+- Phân tích feature importance cho các mô hình cây.
+
+6️⃣ Deployment-oriented Output
+
+- Sinh file Kaggle submission từ model đã lưu.
+
+- Xuất bảng benchmark chi tiết ra Excel để so sánh mô hình.
 
 ## 🚀 Công nghệ sử dụng (Tech Stack)
 - **Ngôn ngữ:** Python
-- **Thư viện:** Pandas, NumPy (Xử lý dữ liệu), Matplotlib, Seaborn (Trực quan hóa).
+- **Thư viện:** Pandas, NumPy (Xử lý dữ liệu), Matplotlib, Seaborn (Trực quan hóa), Scikit-learn, XGBoost, LightGBM, CatBoost
 - **Môi trường:** Jupyter Notebook / Google Colab.
 
 -------------------------------------------------------------
