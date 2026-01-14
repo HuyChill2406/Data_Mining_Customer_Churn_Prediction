@@ -29,7 +29,7 @@ Bộ dữ liệu được sử dụng mô phỏng thông tin khách hàng ngân 
    - Kiểm tra dữ liệu thiếu (Missing values) và trùng lặp (Duplicates).
    - Phân tích đơn biến (Univariate Analysis) và phát hiện ngoại lai (Outlier Detection) sử dụng phương pháp IQR.
 3. **Data Preprocessing:** Xử lý dữ liệu, làm sạch và chuẩn hóa.
-4. **Modeling & Evaluation:** Xây dựng và đánh giá mô hình.
+4. **Modeling & Evaluation:** Xây dựng và đánh giá mô hình (Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost)
 
 ## 🚀 Công nghệ sử dụng (Tech Stack)
 - **Ngôn ngữ:** Python
@@ -69,7 +69,7 @@ The dataset simulates bank customer information (similar to the famous Churn Mod
    - Checking for Missing values and Duplicates.
    - Univariate Analysis and Outlier Detection using the IQR method.
 3. **Data Preprocessing:** Data cleaning, normalization, and feature engineering.
-4. **Modeling & Evaluation:** Building and evaluating models (In Progress).
+4. **Modeling & Evaluation:** Building and evaluating models (Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM, CatBoost).
 
 ## 🚀 Tech Stack
 - **Language:** Python
